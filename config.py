@@ -23,3 +23,5 @@ def get_secret(
 api_key = get_secret("api_key")
 Access_key = get_secret("Access_key")
 Secret_key = get_secret("Secret_key")
+chat_id = get_secret("chat_id")
+

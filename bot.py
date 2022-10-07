@@ -6,7 +6,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 import pyupbit
 
 from config import api_key,Access_key,Secret_key
-from lndicators import RSI
+
 
 bot = telegram.Bot(token = api_key)
 upbit = pyupbit.Upbit(Access_key, Secret_key)
@@ -61,7 +61,7 @@ def callback_button(update, context):
                 
 def handler(update, context):
     user_text = update.message.text 
-    print(user_text)
+    print(update.effective_chat.id)
     
     if user_text.split()[0]=='안녕':
         bot.send_message(chat_id=update.effective_chat.id, text=f"뭘봐")
